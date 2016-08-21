@@ -17,6 +17,8 @@
 
 @property(nonatomic, assign)CGRect contentFrame;
 
+@property(nonatomic, assign)CGRect durationFrame;
+
 /**cell高度*/
 @property(nonatomic, assign)CGFloat cellH;
 
@@ -50,6 +52,11 @@
     CGFloat contentW;
     CGFloat contentH;
     
+    CGFloat durationX;
+    CGFloat durationY = contentY;
+    CGFloat durationH = iconH;
+    CGFloat durationW = durationH;
+    
     
     switch (chat.chatType) {
         case WTchatTypeText:
@@ -59,6 +66,7 @@
             CGSize contentStrSize = [chat.contentText boundingRectWithSize:CGSizeMake(contentMaxW, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size;
             contentW = contentStrSize.width + kContentEdgeLeft + kContentEdgeRight;
             contentH = contentStrSize.height + kContentEdgeTop + kContentEdgeBottom;
+            
         }
             break;
         case WTchatTypeImage:
@@ -112,13 +120,16 @@
     if (chat.isMe) {
         iconX = screenW - margin - iconW;
         contentX = iconX - margin - contentW;
+        durationX = contentX - durationW;
         
     }else{
         iconX = margin;
         contentX = iconX +iconW + margin;
+        durationX = contentX + contentW;
     }
     self.iconFrame = CGRectMake(iconX, iconY, iconW, iconH);
     self.contentFrame = CGRectMake(contentX, contentY, contentW, contentH);
+    self.durationFrame = CGRectMake(durationX, durationY, durationW, durationH);
     
     //cellH判断聊天内容和头像高度哪个更大
     self.cellH = (contentH > iconH)?CGRectGetMaxY(self.contentFrame) + margin:CGRectGetMaxY(self.iconFrame) + margin;

@@ -12,10 +12,16 @@
 #import "WTChat.h"
 #import "UIImage+YFResizing.h"
 #import <UIButton+WebCache.h>
+#import "EMCDDeviceManager.h"
+
 @interface WTChatCell ()
 
 /**时间*/
 @property(nonatomic, weak)UILabel *timeLabel;
+
+/**语音时间*/
+@property(nonatomic, weak)UILabel *durationLabel;
+
 //头像按钮手势
 @property(nonatomic, weak)WTLongPressBtn *userIconBtn;
 //聊天内容手势
@@ -66,6 +72,14 @@
         [self.contentView addSubview: contentTextBtn];
         self.contentBtn = contentTextBtn;
         
+        //语音时间
+        UILabel *durationLabel = [[UILabel alloc]init];
+        durationLabel.textColor = [UIColor lightGrayColor];
+        durationLabel.font = [UIFont systemFontOfSize:13];
+        durationLabel.textAlignment = NSTextAlignmentCenter;
+        durationLabel.hidden = YES;
+        [self.contentView addSubview:durationLabel];
+        self.durationLabel = durationLabel;
         
     }
     return self;
@@ -95,6 +109,26 @@
             }
         }
             break;
+        case WTchatTypeVoice:
+        {
+            if ([[EMCDDeviceManager sharedInstance]isPlaying]) {
+                
+                [[EMCDDeviceManager sharedInstance]stopPlaying];
+                [[EMCDDeviceManager sharedInstance] asyncPlayingWithPath:self.chatFrame.chat.voicePath completion:^(NSError *error) {
+                    
+                    NSLog(@"播放");
+                }];
+                
+            }else{
+                
+                [[EMCDDeviceManager sharedInstance] asyncPlayingWithPath:self.chatFrame.chat.voicePath completion:^(NSError *error) {
+                    
+                    NSLog(@"播放");
+                }];
+            }
+
+        }
+            break;
         default:
             break;
     }
@@ -115,7 +149,7 @@
     [self.contentBtn setBackgroundImage:[UIImage yf_resizingWithIma:chat.contentTextBackgroundImage] forState:UIControlStateNormal];
     [self.contentBtn setBackgroundImage:[UIImage yf_resizingWithIma:chat.contentTextBackgroundImageHL] forState:UIControlStateHighlighted];
 
-    
+    self.durationLabel.hidden = (chat.chatType != WTchatTypeVoice);
     switch (chat.chatType) {
         case WTchatTypeText:
         {
@@ -144,8 +178,10 @@
             break;
         case WTchatTypeVoice:
         {
+            [self.contentBtn setTitle:nil forState:UIControlStateNormal];
+            [self.contentBtn setImage:[UIImage imageNamed:@"SenderVoiceNodePlaying003"] forState:UIControlStateNormal];
             
-            [self.contentBtn setTitle:[NSString stringWithFormat:@"%zd", chat.voiceDuration] forState:UIControlStateNormal];
+            self.durationLabel.text = [NSString stringWithFormat:@"%zd\"", chat.voiceDuration];
             
         }
             break;
@@ -181,6 +217,7 @@
     self.timeLabel.frame = self.chatFrame.timeFrame;
     self.userIconBtn.frame = self.chatFrame.iconFrame;
     self.contentBtn.frame = self.chatFrame.contentFrame;
+    self.durationLabel.frame = self.chatFrame.durationFrame;
     
 }
 @end

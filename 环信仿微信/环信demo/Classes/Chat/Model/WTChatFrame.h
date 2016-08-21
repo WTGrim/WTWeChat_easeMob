@@ -27,6 +27,8 @@
 
 @property(nonatomic, assign, readonly)CGRect contentFrame;
 
+@property(nonatomic, assign, readonly)CGRect durationFrame;
+
 /**cell高度*/
 @property(nonatomic, assign, readonly)CGFloat cellH;
 
