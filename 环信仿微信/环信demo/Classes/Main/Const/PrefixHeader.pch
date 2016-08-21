@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  环信demo
+//
+//  Created by GRIM on 16/8/6.
+//  Copyright © 2016年 董文涛. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "EaseMob.h"
+#import "SVProgressHUD.h"
+#import "JDStatusBarNotification.h"
+
+#define backgroundColor243  [UIColor colorWithRed:243/255.0 green:243/255.0 blue:243/255.0 alpha:1]
+
+
+
+#endif /* PrefixHeader_pch */

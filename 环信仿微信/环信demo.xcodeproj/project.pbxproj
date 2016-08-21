@@ -1,0 +1,1091 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0200469C1D55D40100C6C4BA /* WTLoginRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0200468D1D55D40100C6C4BA /* WTLoginRegisterController.m */; };
+		0200469D1D55D40100C6C4BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 020046971D55D40100C6C4BA /* AppDelegate.m */; };
+		0201B9D71D542638003FE2FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0201B9D61D542638003FE2FA /* main.m */; };
+		0201B9E01D542638003FE2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0201B9DE1D542638003FE2FA /* Main.storyboard */; };
+		0201B9E21D542638003FE2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0201B9E11D542638003FE2FA /* Assets.xcassets */; };
+		0201B9F01D542638003FE2FA /* __demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0201B9EF1D542638003FE2FA /* __demoTests.m */; };
+		0201B9FB1D542638003FE2FA /* __demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0201B9FA1D542638003FE2FA /* __demoUITests.m */; };
+		0242E8E81D5C0D2100225015 /* WTContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0242E8E61D5C0D2100225015 /* WTContactCell.m */; };
+		0242E8E91D5C0D2100225015 /* WTContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0242E8E71D5C0D2100225015 /* WTContactCell.xib */; };
+		0242E8EC1D5C1F3E00225015 /* WTDetaiUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0242E8EB1D5C1F3E00225015 /* WTDetaiUserInfoController.m */; };
+		0242E8EE1D5C1F5300225015 /* WTDetaiUserInfoController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0242E8ED1D5C1F5300225015 /* WTDetaiUserInfoController.storyboard */; };
+		0242E8F11D5C6A0800225015 /* WTChatRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0242E8F01D5C6A0800225015 /* WTChatRoomController.m */; };
+		0242E8F41D5C6A7B00225015 /* WTInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0242E8F31D5C6A7B00225015 /* WTInputView.m */; };
+		0242E8F61D5C6A8F00225015 /* WTInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0242E8F51D5C6A8F00225015 /* WTInputView.xib */; };
+		025544E61D59B7A70087C813 /* WTWeChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025544E51D59B7A70087C813 /* WTWeChatController.m */; };
+		025544E91D59C4C70087C813 /* WTContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025544E81D59C4C70087C813 /* WTContactController.m */; };
+		02578C211D603B37005FEE67 /* WTChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 02578C201D603B37005FEE67 /* WTChat.m */; };
+		02578C241D603B4D005FEE67 /* WTChatFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 02578C231D603B4D005FEE67 /* WTChatFrame.m */; };
+		02578C271D60495F005FEE67 /* WTLongPressBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 02578C261D60495F005FEE67 /* WTLongPressBtn.m */; };
+		02578C2A1D604DA4005FEE67 /* WTChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02578C291D604DA4005FEE67 /* WTChatCell.m */; };
+		0260ADB21D68523600B5FD81 /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADA41D68523600B5FD81 /* EMAudioPlayerUtil.m */; };
+		0260ADB31D68523600B5FD81 /* EMAudioRecorderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADA61D68523600B5FD81 /* EMAudioRecorderUtil.m */; };
+		0260ADB41D68523600B5FD81 /* EMCDDeviceManager+Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADA81D68523600B5FD81 /* EMCDDeviceManager+Media.m */; };
+		0260ADB51D68523600B5FD81 /* EMCDDeviceManager+Microphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADAA1D68523600B5FD81 /* EMCDDeviceManager+Microphone.m */; };
+		0260ADB61D68523600B5FD81 /* EMCDDeviceManager+ProximitySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADAC1D68523600B5FD81 /* EMCDDeviceManager+ProximitySensor.m */; };
+		0260ADB71D68523600B5FD81 /* EMCDDeviceManager+Remind.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADAE1D68523600B5FD81 /* EMCDDeviceManager+Remind.m */; };
+		0260ADB81D68523600B5FD81 /* EMCDDeviceManagerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADB11D68523600B5FD81 /* EMCDDeviceManagerBase.m */; };
+		0260ADC91D68524D00B5FD81 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADBC1D68524D00B5FD81 /* amrFileCodec.mm */; };
+		0260ADCA1D68524D00B5FD81 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADBE1D68524D00B5FD81 /* wav.mm */; };
+		0260ADCB1D68524D00B5FD81 /* EMVoiceConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADC01D68524D00B5FD81 /* EMVoiceConverter.mm */; };
+		0260ADCC1D68524D00B5FD81 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0260ADC41D68524D00B5FD81 /* libopencore-amrnb.a */; };
+		0260ADCD1D68524D00B5FD81 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0260ADC81D68524D00B5FD81 /* libopencore-amrwb.a */; };
+		02FCD2A01D55F9FA003A7149 /* WTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCD29F1D55F9FA003A7149 /* WTTabBarController.m */; };
+		02FCD2A31D561352003A7149 /* WTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCD2A21D561352003A7149 /* WTNavigationController.m */; };
+		02FCD2AA1D56172F003A7149 /* NSString+YFTimestamp.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCD2A51D56172F003A7149 /* NSString+YFTimestamp.m */; };
+		02FCD2AB1D56172F003A7149 /* UIImage+YFResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCD2A71D56172F003A7149 /* UIImage+YFResizing.m */; };
+		02FCD2AC1D56172F003A7149 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCD2A91D56172F003A7149 /* UINavigationBar+Awesome.m */; };
+		02FCD2B01D562859003A7149 /* WTMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCD2AF1D562859003A7149 /* WTMeController.m */; };
+		02FCD2B21D562A7B003A7149 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FCD2B11D562A7B003A7149 /* Images.xcassets */; };
+		02FCD2B51D5636A7003A7149 /* WTLogoffController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FCD2B41D5636A7003A7149 /* WTLogoffController.m */; };
+		B761E82FAE0514174577802C /* libPods-环信demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA9CFD9AB174E85DDAAA1A5 /* libPods-环信demo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0201B9EC1D542638003FE2FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0201B9CA1D542638003FE2FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0201B9D11D542638003FE2FA;
+			remoteInfo = "环信demo";
+		};
+		0201B9F71D542638003FE2FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0201B9CA1D542638003FE2FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0201B9D11D542638003FE2FA;
+			remoteInfo = "环信demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0200468C1D55D40100C6C4BA /* WTLoginRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTLoginRegisterController.h; sourceTree = "<group>"; };
+		0200468D1D55D40100C6C4BA /* WTLoginRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTLoginRegisterController.m; sourceTree = "<group>"; };
+		020046961D55D40100C6C4BA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		020046971D55D40100C6C4BA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0201B9D21D542638003FE2FA /* 环信demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "环信demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0201B9D61D542638003FE2FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0201B9DF1D542638003FE2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0201B9E11D542638003FE2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0201B9E61D542638003FE2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0201B9EB1D542638003FE2FA /* 环信demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "环信demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0201B9EF1D542638003FE2FA /* __demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __demoTests.m; sourceTree = "<group>"; };
+		0201B9F11D542638003FE2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0201B9F61D542638003FE2FA /* 环信demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "环信demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0201B9FA1D542638003FE2FA /* __demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __demoUITests.m; sourceTree = "<group>"; };
+		0201B9FC1D542638003FE2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0242E8E51D5C0D2100225015 /* WTContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTContactCell.h; sourceTree = "<group>"; };
+		0242E8E61D5C0D2100225015 /* WTContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTContactCell.m; sourceTree = "<group>"; };
+		0242E8E71D5C0D2100225015 /* WTContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTContactCell.xib; sourceTree = "<group>"; };
+		0242E8EA1D5C1F3E00225015 /* WTDetaiUserInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTDetaiUserInfoController.h; path = ../../Contact/Controller/WTDetaiUserInfoController.h; sourceTree = "<group>"; };
+		0242E8EB1D5C1F3E00225015 /* WTDetaiUserInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTDetaiUserInfoController.m; path = ../../Contact/Controller/WTDetaiUserInfoController.m; sourceTree = "<group>"; };
+		0242E8ED1D5C1F5300225015 /* WTDetaiUserInfoController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = WTDetaiUserInfoController.storyboard; path = ../../Contact/Controller/WTDetaiUserInfoController.storyboard; sourceTree = "<group>"; };
+		0242E8EF1D5C6A0800225015 /* WTChatRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTChatRoomController.h; sourceTree = "<group>"; };
+		0242E8F01D5C6A0800225015 /* WTChatRoomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTChatRoomController.m; sourceTree = "<group>"; };
+		0242E8F21D5C6A7B00225015 /* WTInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTInputView.h; sourceTree = "<group>"; };
+		0242E8F31D5C6A7B00225015 /* WTInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTInputView.m; sourceTree = "<group>"; };
+		0242E8F51D5C6A8F00225015 /* WTInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTInputView.xib; sourceTree = "<group>"; };
+		025544E41D59B7A70087C813 /* WTWeChatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTWeChatController.h; sourceTree = "<group>"; };
+		025544E51D59B7A70087C813 /* WTWeChatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWeChatController.m; sourceTree = "<group>"; };
+		025544E71D59C4C70087C813 /* WTContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTContactController.h; sourceTree = "<group>"; };
+		025544E81D59C4C70087C813 /* WTContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTContactController.m; sourceTree = "<group>"; };
+		02578C1F1D603B36005FEE67 /* WTChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTChat.h; sourceTree = "<group>"; };
+		02578C201D603B37005FEE67 /* WTChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTChat.m; sourceTree = "<group>"; };
+		02578C221D603B4D005FEE67 /* WTChatFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTChatFrame.h; sourceTree = "<group>"; };
+		02578C231D603B4D005FEE67 /* WTChatFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTChatFrame.m; sourceTree = "<group>"; };
+		02578C251D60495F005FEE67 /* WTLongPressBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTLongPressBtn.h; sourceTree = "<group>"; };
+		02578C261D60495F005FEE67 /* WTLongPressBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTLongPressBtn.m; sourceTree = "<group>"; };
+		02578C281D604DA4005FEE67 /* WTChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTChatCell.h; sourceTree = "<group>"; };
+		02578C291D604DA4005FEE67 /* WTChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTChatCell.m; sourceTree = "<group>"; };
+		0260AD9F1D68523600B5FD81 /* EMCDDeviceManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerDelegate.h; sourceTree = "<group>"; };
+		0260ADA01D68523600B5FD81 /* EMCDDeviceManagerProximitySensorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerProximitySensorDelegate.h; sourceTree = "<group>"; };
+		0260ADA21D68523600B5FD81 /* DemoErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoErrorCode.h; sourceTree = "<group>"; };
+		0260ADA31D68523600B5FD81 /* EMAudioPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioPlayerUtil.h; sourceTree = "<group>"; };
+		0260ADA41D68523600B5FD81 /* EMAudioPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioPlayerUtil.m; sourceTree = "<group>"; };
+		0260ADA51D68523600B5FD81 /* EMAudioRecorderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAudioRecorderUtil.h; sourceTree = "<group>"; };
+		0260ADA61D68523600B5FD81 /* EMAudioRecorderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAudioRecorderUtil.m; sourceTree = "<group>"; };
+		0260ADA71D68523600B5FD81 /* EMCDDeviceManager+Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Media.h"; sourceTree = "<group>"; };
+		0260ADA81D68523600B5FD81 /* EMCDDeviceManager+Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Media.m"; sourceTree = "<group>"; };
+		0260ADA91D68523600B5FD81 /* EMCDDeviceManager+Microphone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Microphone.h"; sourceTree = "<group>"; };
+		0260ADAA1D68523600B5FD81 /* EMCDDeviceManager+Microphone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Microphone.m"; sourceTree = "<group>"; };
+		0260ADAB1D68523600B5FD81 /* EMCDDeviceManager+ProximitySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+ProximitySensor.h"; sourceTree = "<group>"; };
+		0260ADAC1D68523600B5FD81 /* EMCDDeviceManager+ProximitySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+ProximitySensor.m"; sourceTree = "<group>"; };
+		0260ADAD1D68523600B5FD81 /* EMCDDeviceManager+Remind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMCDDeviceManager+Remind.h"; sourceTree = "<group>"; };
+		0260ADAE1D68523600B5FD81 /* EMCDDeviceManager+Remind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EMCDDeviceManager+Remind.m"; sourceTree = "<group>"; };
+		0260ADAF1D68523600B5FD81 /* EMCDDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManager.h; sourceTree = "<group>"; };
+		0260ADB01D68523600B5FD81 /* EMCDDeviceManagerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerBase.h; sourceTree = "<group>"; };
+		0260ADB11D68523600B5FD81 /* EMCDDeviceManagerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCDDeviceManagerBase.m; sourceTree = "<group>"; };
+		0260ADBB1D68524D00B5FD81 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		0260ADBC1D68524D00B5FD81 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		0260ADBD1D68524D00B5FD81 /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+		0260ADBE1D68524D00B5FD81 /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		0260ADBF1D68524D00B5FD81 /* EMVoiceConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMVoiceConverter.h; sourceTree = "<group>"; };
+		0260ADC01D68524D00B5FD81 /* EMVoiceConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EMVoiceConverter.mm; sourceTree = "<group>"; };
+		0260ADC21D68524D00B5FD81 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		0260ADC31D68524D00B5FD81 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		0260ADC41D68524D00B5FD81 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		0260ADC61D68524D00B5FD81 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		0260ADC71D68524D00B5FD81 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		0260ADC81D68524D00B5FD81 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		02FCD29E1D55F9FA003A7149 /* WTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTTabBarController.h; sourceTree = "<group>"; };
+		02FCD29F1D55F9FA003A7149 /* WTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTTabBarController.m; sourceTree = "<group>"; };
+		02FCD2A11D561352003A7149 /* WTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTNavigationController.h; sourceTree = "<group>"; };
+		02FCD2A21D561352003A7149 /* WTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTNavigationController.m; sourceTree = "<group>"; };
+		02FCD2A41D56172F003A7149 /* NSString+YFTimestamp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YFTimestamp.h"; sourceTree = "<group>"; };
+		02FCD2A51D56172F003A7149 /* NSString+YFTimestamp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YFTimestamp.m"; sourceTree = "<group>"; };
+		02FCD2A61D56172F003A7149 /* UIImage+YFResizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YFResizing.h"; sourceTree = "<group>"; };
+		02FCD2A71D56172F003A7149 /* UIImage+YFResizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YFResizing.m"; sourceTree = "<group>"; };
+		02FCD2A81D56172F003A7149 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		02FCD2A91D56172F003A7149 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		02FCD2AD1D561B2E003A7149 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		02FCD2AE1D562859003A7149 /* WTMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMeController.h; sourceTree = "<group>"; };
+		02FCD2AF1D562859003A7149 /* WTMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMeController.m; sourceTree = "<group>"; };
+		02FCD2B11D562A7B003A7149 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		02FCD2B31D5636A7003A7149 /* WTLogoffController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTLogoffController.h; sourceTree = "<group>"; };
+		02FCD2B41D5636A7003A7149 /* WTLogoffController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTLogoffController.m; sourceTree = "<group>"; };
+		0563F93CC5E8CF2760780422 /* Pods-环信demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-环信demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-环信demo/Pods-环信demo.release.xcconfig"; sourceTree = "<group>"; };
+		8DA9CFD9AB174E85DDAAA1A5 /* libPods-环信demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-环信demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34252935AB8E1C2E5387E5E /* Pods-环信demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-环信demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-环信demo/Pods-环信demo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0201B9CF1D542638003FE2FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B761E82FAE0514174577802C /* libPods-环信demo.a in Frameworks */,
+				0260ADCD1D68524D00B5FD81 /* libopencore-amrwb.a in Frameworks */,
+				0260ADCC1D68524D00B5FD81 /* libopencore-amrnb.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0201B9E81D542638003FE2FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0201B9F31D542638003FE2FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0200467D1D55D40100C6C4BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0200467E1D55D40100C6C4BA /* Chat */,
+				020046821D55D40100C6C4BA /* Contact */,
+				020046861D55D40100C6C4BA /* Discover */,
+				0200468A1D55D40100C6C4BA /* LoginRegister */,
+				020046981D55D40100C6C4BA /* Me */,
+				020046901D55D40100C6C4BA /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0200467E1D55D40100C6C4BA /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0200467F1D55D40100C6C4BA /* Controller */,
+				020046801D55D40100C6C4BA /* Model */,
+				020046811D55D40100C6C4BA /* View */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		0200467F1D55D40100C6C4BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				025544E41D59B7A70087C813 /* WTWeChatController.h */,
+				025544E51D59B7A70087C813 /* WTWeChatController.m */,
+				0242E8EA1D5C1F3E00225015 /* WTDetaiUserInfoController.h */,
+				0242E8EB1D5C1F3E00225015 /* WTDetaiUserInfoController.m */,
+				0242E8ED1D5C1F5300225015 /* WTDetaiUserInfoController.storyboard */,
+				0242E8EF1D5C6A0800225015 /* WTChatRoomController.h */,
+				0242E8F01D5C6A0800225015 /* WTChatRoomController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		020046801D55D40100C6C4BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02578C1F1D603B36005FEE67 /* WTChat.h */,
+				02578C201D603B37005FEE67 /* WTChat.m */,
+				02578C221D603B4D005FEE67 /* WTChatFrame.h */,
+				02578C231D603B4D005FEE67 /* WTChatFrame.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		020046811D55D40100C6C4BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0242E8F21D5C6A7B00225015 /* WTInputView.h */,
+				0242E8F31D5C6A7B00225015 /* WTInputView.m */,
+				0242E8F51D5C6A8F00225015 /* WTInputView.xib */,
+				02578C251D60495F005FEE67 /* WTLongPressBtn.h */,
+				02578C261D60495F005FEE67 /* WTLongPressBtn.m */,
+				02578C281D604DA4005FEE67 /* WTChatCell.h */,
+				02578C291D604DA4005FEE67 /* WTChatCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		020046821D55D40100C6C4BA /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				020046831D55D40100C6C4BA /* Controller */,
+				020046841D55D40100C6C4BA /* Model */,
+				020046851D55D40100C6C4BA /* View */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		020046831D55D40100C6C4BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				025544E71D59C4C70087C813 /* WTContactController.h */,
+				025544E81D59C4C70087C813 /* WTContactController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		020046841D55D40100C6C4BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		020046851D55D40100C6C4BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0242E8E51D5C0D2100225015 /* WTContactCell.h */,
+				0242E8E61D5C0D2100225015 /* WTContactCell.m */,
+				0242E8E71D5C0D2100225015 /* WTContactCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		020046861D55D40100C6C4BA /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				020046871D55D40100C6C4BA /* Controller */,
+				020046881D55D40100C6C4BA /* Model */,
+				020046891D55D40100C6C4BA /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		020046871D55D40100C6C4BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		020046881D55D40100C6C4BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		020046891D55D40100C6C4BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0200468A1D55D40100C6C4BA /* LoginRegister */ = {
+			isa = PBXGroup;
+			children = (
+				0200468B1D55D40100C6C4BA /* Controller */,
+				0200468E1D55D40100C6C4BA /* Model */,
+				0200468F1D55D40100C6C4BA /* View */,
+			);
+			path = LoginRegister;
+			sourceTree = "<group>";
+		};
+		0200468B1D55D40100C6C4BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0200468C1D55D40100C6C4BA /* WTLoginRegisterController.h */,
+				0200468D1D55D40100C6C4BA /* WTLoginRegisterController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0200468E1D55D40100C6C4BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0200468F1D55D40100C6C4BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		020046901D55D40100C6C4BA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0260AD9C1D68521C00B5FD81 /* Lib */,
+				020046911D55D40100C6C4BA /* Category */,
+				020046921D55D40100C6C4BA /* Const */,
+				020046931D55D40100C6C4BA /* Controller */,
+				020046941D55D40100C6C4BA /* Model */,
+				020046951D55D40100C6C4BA /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		020046911D55D40100C6C4BA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				02FCD2A41D56172F003A7149 /* NSString+YFTimestamp.h */,
+				02FCD2A51D56172F003A7149 /* NSString+YFTimestamp.m */,
+				02FCD2A61D56172F003A7149 /* UIImage+YFResizing.h */,
+				02FCD2A71D56172F003A7149 /* UIImage+YFResizing.m */,
+				02FCD2A81D56172F003A7149 /* UINavigationBar+Awesome.h */,
+				02FCD2A91D56172F003A7149 /* UINavigationBar+Awesome.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		020046921D55D40100C6C4BA /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				02FCD2AD1D561B2E003A7149 /* PrefixHeader.pch */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		020046931D55D40100C6C4BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				02FCD29E1D55F9FA003A7149 /* WTTabBarController.h */,
+				02FCD29F1D55F9FA003A7149 /* WTTabBarController.m */,
+				02FCD2A11D561352003A7149 /* WTNavigationController.h */,
+				02FCD2A21D561352003A7149 /* WTNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		020046941D55D40100C6C4BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		020046951D55D40100C6C4BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				020046961D55D40100C6C4BA /* AppDelegate.h */,
+				020046971D55D40100C6C4BA /* AppDelegate.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		020046981D55D40100C6C4BA /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				020046991D55D40100C6C4BA /* Controller */,
+				0200469A1D55D40100C6C4BA /* Model */,
+				0200469B1D55D40100C6C4BA /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		020046991D55D40100C6C4BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				02FCD2AE1D562859003A7149 /* WTMeController.h */,
+				02FCD2AF1D562859003A7149 /* WTMeController.m */,
+				02FCD2B31D5636A7003A7149 /* WTLogoffController.h */,
+				02FCD2B41D5636A7003A7149 /* WTLogoffController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0200469A1D55D40100C6C4BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0200469B1D55D40100C6C4BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0201B9C91D542638003FE2FA = {
+			isa = PBXGroup;
+			children = (
+				0201B9D41D542638003FE2FA /* 环信demo */,
+				0201B9EE1D542638003FE2FA /* 环信demoTests */,
+				0201B9F91D542638003FE2FA /* 环信demoUITests */,
+				0201B9D31D542638003FE2FA /* Products */,
+				0AFA1C526416D7DE0EEEF606 /* Pods */,
+				ACC850229B89E93FD537DCB1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0201B9D31D542638003FE2FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0201B9D21D542638003FE2FA /* 环信demo.app */,
+				0201B9EB1D542638003FE2FA /* 环信demoTests.xctest */,
+				0201B9F61D542638003FE2FA /* 环信demoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0201B9D41D542638003FE2FA /* 环信demo */ = {
+			isa = PBXGroup;
+			children = (
+				0200467D1D55D40100C6C4BA /* Classes */,
+				0201B9DE1D542638003FE2FA /* Main.storyboard */,
+				0201B9E11D542638003FE2FA /* Assets.xcassets */,
+				0201B9E61D542638003FE2FA /* Info.plist */,
+				02FCD2B11D562A7B003A7149 /* Images.xcassets */,
+				0201B9D51D542638003FE2FA /* Supporting Files */,
+			);
+			path = "环信demo";
+			sourceTree = "<group>";
+		};
+		0201B9D51D542638003FE2FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0201B9D61D542638003FE2FA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0201B9EE1D542638003FE2FA /* 环信demoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0201B9EF1D542638003FE2FA /* __demoTests.m */,
+				0201B9F11D542638003FE2FA /* Info.plist */,
+			);
+			path = "环信demoTests";
+			sourceTree = "<group>";
+		};
+		0201B9F91D542638003FE2FA /* 环信demoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0201B9FA1D542638003FE2FA /* __demoUITests.m */,
+				0201B9FC1D542638003FE2FA /* Info.plist */,
+			);
+			path = "环信demoUITests";
+			sourceTree = "<group>";
+		};
+		0260AD9C1D68521C00B5FD81 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				0260ADB91D68524D00B5FD81 /* VoiceConvert */,
+				0260AD9D1D68523600B5FD81 /* DeviceUtil */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		0260AD9D1D68523600B5FD81 /* DeviceUtil */ = {
+			isa = PBXGroup;
+			children = (
+				0260AD9E1D68523600B5FD81 /* delegates */,
+				0260ADA11D68523600B5FD81 /* internal */,
+			);
+			path = DeviceUtil;
+			sourceTree = "<group>";
+		};
+		0260AD9E1D68523600B5FD81 /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				0260AD9F1D68523600B5FD81 /* EMCDDeviceManagerDelegate.h */,
+				0260ADA01D68523600B5FD81 /* EMCDDeviceManagerProximitySensorDelegate.h */,
+			);
+			path = delegates;
+			sourceTree = "<group>";
+		};
+		0260ADA11D68523600B5FD81 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				0260ADA21D68523600B5FD81 /* DemoErrorCode.h */,
+				0260ADA31D68523600B5FD81 /* EMAudioPlayerUtil.h */,
+				0260ADA41D68523600B5FD81 /* EMAudioPlayerUtil.m */,
+				0260ADA51D68523600B5FD81 /* EMAudioRecorderUtil.h */,
+				0260ADA61D68523600B5FD81 /* EMAudioRecorderUtil.m */,
+				0260ADA71D68523600B5FD81 /* EMCDDeviceManager+Media.h */,
+				0260ADA81D68523600B5FD81 /* EMCDDeviceManager+Media.m */,
+				0260ADA91D68523600B5FD81 /* EMCDDeviceManager+Microphone.h */,
+				0260ADAA1D68523600B5FD81 /* EMCDDeviceManager+Microphone.m */,
+				0260ADAB1D68523600B5FD81 /* EMCDDeviceManager+ProximitySensor.h */,
+				0260ADAC1D68523600B5FD81 /* EMCDDeviceManager+ProximitySensor.m */,
+				0260ADAD1D68523600B5FD81 /* EMCDDeviceManager+Remind.h */,
+				0260ADAE1D68523600B5FD81 /* EMCDDeviceManager+Remind.m */,
+				0260ADAF1D68523600B5FD81 /* EMCDDeviceManager.h */,
+				0260ADB01D68523600B5FD81 /* EMCDDeviceManagerBase.h */,
+				0260ADB11D68523600B5FD81 /* EMCDDeviceManagerBase.m */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		0260ADB91D68524D00B5FD81 /* VoiceConvert */ = {
+			isa = PBXGroup;
+			children = (
+				0260ADBA1D68524D00B5FD81 /* amrwapper */,
+				0260ADBF1D68524D00B5FD81 /* EMVoiceConverter.h */,
+				0260ADC01D68524D00B5FD81 /* EMVoiceConverter.mm */,
+				0260ADC11D68524D00B5FD81 /* opencore-amrnb */,
+				0260ADC51D68524D00B5FD81 /* opencore-amrwb */,
+			);
+			path = VoiceConvert;
+			sourceTree = "<group>";
+		};
+		0260ADBA1D68524D00B5FD81 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				0260ADBB1D68524D00B5FD81 /* amrFileCodec.h */,
+				0260ADBC1D68524D00B5FD81 /* amrFileCodec.mm */,
+				0260ADBD1D68524D00B5FD81 /* wav.h */,
+				0260ADBE1D68524D00B5FD81 /* wav.mm */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+		0260ADC11D68524D00B5FD81 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				0260ADC21D68524D00B5FD81 /* interf_dec.h */,
+				0260ADC31D68524D00B5FD81 /* interf_enc.h */,
+				0260ADC41D68524D00B5FD81 /* libopencore-amrnb.a */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		0260ADC51D68524D00B5FD81 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				0260ADC61D68524D00B5FD81 /* dec_if.h */,
+				0260ADC71D68524D00B5FD81 /* if_rom.h */,
+				0260ADC81D68524D00B5FD81 /* libopencore-amrwb.a */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		0AFA1C526416D7DE0EEEF606 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A34252935AB8E1C2E5387E5E /* Pods-环信demo.debug.xcconfig */,
+				0563F93CC5E8CF2760780422 /* Pods-环信demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ACC850229B89E93FD537DCB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DA9CFD9AB174E85DDAAA1A5 /* libPods-环信demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0201B9D11D542638003FE2FA /* 环信demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0201B9FF1D542638003FE2FA /* Build configuration list for PBXNativeTarget "环信demo" */;
+			buildPhases = (
+				FA9AAEA13B06960A829B23FD /* 📦 Check Pods Manifest.lock */,
+				0201B9CE1D542638003FE2FA /* Sources */,
+				0201B9CF1D542638003FE2FA /* Frameworks */,
+				0201B9D01D542638003FE2FA /* Resources */,
+				F6BFE4E43A81354B2DB1644A /* 📦 Embed Pods Frameworks */,
+				D8DFDF27AB622604822FC38E /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "环信demo";
+			productName = "环信demo";
+			productReference = 0201B9D21D542638003FE2FA /* 环信demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0201B9EA1D542638003FE2FA /* 环信demoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0201BA021D542638003FE2FA /* Build configuration list for PBXNativeTarget "环信demoTests" */;
+			buildPhases = (
+				0201B9E71D542638003FE2FA /* Sources */,
+				0201B9E81D542638003FE2FA /* Frameworks */,
+				0201B9E91D542638003FE2FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0201B9ED1D542638003FE2FA /* PBXTargetDependency */,
+			);
+			name = "环信demoTests";
+			productName = "环信demoTests";
+			productReference = 0201B9EB1D542638003FE2FA /* 环信demoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0201B9F51D542638003FE2FA /* 环信demoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0201BA051D542638003FE2FA /* Build configuration list for PBXNativeTarget "环信demoUITests" */;
+			buildPhases = (
+				0201B9F21D542638003FE2FA /* Sources */,
+				0201B9F31D542638003FE2FA /* Frameworks */,
+				0201B9F41D542638003FE2FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0201B9F81D542638003FE2FA /* PBXTargetDependency */,
+			);
+			name = "环信demoUITests";
+			productName = "环信demoUITests";
+			productReference = 0201B9F61D542638003FE2FA /* 环信demoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0201B9CA1D542638003FE2FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WT;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "董文涛";
+				TargetAttributes = {
+					0201B9D11D542638003FE2FA = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 624TUL8XMA;
+					};
+					0201B9EA1D542638003FE2FA = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 624TUL8XMA;
+						TestTargetID = 0201B9D11D542638003FE2FA;
+					};
+					0201B9F51D542638003FE2FA = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 624TUL8XMA;
+						TestTargetID = 0201B9D11D542638003FE2FA;
+					};
+				};
+			};
+			buildConfigurationList = 0201B9CD1D542638003FE2FA /* Build configuration list for PBXProject "环信demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0201B9C91D542638003FE2FA;
+			productRefGroup = 0201B9D31D542638003FE2FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0201B9D11D542638003FE2FA /* 环信demo */,
+				0201B9EA1D542638003FE2FA /* 环信demoTests */,
+				0201B9F51D542638003FE2FA /* 环信demoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0201B9D01D542638003FE2FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0242E8F61D5C6A8F00225015 /* WTInputView.xib in Resources */,
+				02FCD2B21D562A7B003A7149 /* Images.xcassets in Resources */,
+				0242E8E91D5C0D2100225015 /* WTContactCell.xib in Resources */,
+				0201B9E21D542638003FE2FA /* Assets.xcassets in Resources */,
+				0242E8EE1D5C1F5300225015 /* WTDetaiUserInfoController.storyboard in Resources */,
+				0201B9E01D542638003FE2FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0201B9E91D542638003FE2FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0201B9F41D542638003FE2FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D8DFDF27AB622604822FC38E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-环信demo/Pods-环信demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6BFE4E43A81354B2DB1644A /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-环信demo/Pods-环信demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA9AAEA13B06960A829B23FD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0201B9CE1D542638003FE2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02578C241D603B4D005FEE67 /* WTChatFrame.m in Sources */,
+				0260ADB71D68523600B5FD81 /* EMCDDeviceManager+Remind.m in Sources */,
+				025544E61D59B7A70087C813 /* WTWeChatController.m in Sources */,
+				02FCD2A31D561352003A7149 /* WTNavigationController.m in Sources */,
+				0260ADB41D68523600B5FD81 /* EMCDDeviceManager+Media.m in Sources */,
+				02FCD2AA1D56172F003A7149 /* NSString+YFTimestamp.m in Sources */,
+				0200469C1D55D40100C6C4BA /* WTLoginRegisterController.m in Sources */,
+				02FCD2B51D5636A7003A7149 /* WTLogoffController.m in Sources */,
+				02578C2A1D604DA4005FEE67 /* WTChatCell.m in Sources */,
+				0260ADB81D68523600B5FD81 /* EMCDDeviceManagerBase.m in Sources */,
+				0242E8EC1D5C1F3E00225015 /* WTDetaiUserInfoController.m in Sources */,
+				02FCD2AC1D56172F003A7149 /* UINavigationBar+Awesome.m in Sources */,
+				02578C211D603B37005FEE67 /* WTChat.m in Sources */,
+				0201B9D71D542638003FE2FA /* main.m in Sources */,
+				0260ADB51D68523600B5FD81 /* EMCDDeviceManager+Microphone.m in Sources */,
+				02578C271D60495F005FEE67 /* WTLongPressBtn.m in Sources */,
+				025544E91D59C4C70087C813 /* WTContactController.m in Sources */,
+				02FCD2A01D55F9FA003A7149 /* WTTabBarController.m in Sources */,
+				0260ADCA1D68524D00B5FD81 /* wav.mm in Sources */,
+				0260ADCB1D68524D00B5FD81 /* EMVoiceConverter.mm in Sources */,
+				02FCD2B01D562859003A7149 /* WTMeController.m in Sources */,
+				0260ADB61D68523600B5FD81 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
+				0242E8F11D5C6A0800225015 /* WTChatRoomController.m in Sources */,
+				0260ADC91D68524D00B5FD81 /* amrFileCodec.mm in Sources */,
+				0260ADB31D68523600B5FD81 /* EMAudioRecorderUtil.m in Sources */,
+				02FCD2AB1D56172F003A7149 /* UIImage+YFResizing.m in Sources */,
+				0200469D1D55D40100C6C4BA /* AppDelegate.m in Sources */,
+				0242E8F41D5C6A7B00225015 /* WTInputView.m in Sources */,
+				0260ADB21D68523600B5FD81 /* EMAudioPlayerUtil.m in Sources */,
+				0242E8E81D5C0D2100225015 /* WTContactCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0201B9E71D542638003FE2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0201B9F01D542638003FE2FA /* __demoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0201B9F21D542638003FE2FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0201B9FB1D542638003FE2FA /* __demoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0201B9ED1D542638003FE2FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0201B9D11D542638003FE2FA /* 环信demo */;
+			targetProxy = 0201B9EC1D542638003FE2FA /* PBXContainerItemProxy */;
+		};
+		0201B9F81D542638003FE2FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0201B9D11D542638003FE2FA /* 环信demo */;
+			targetProxy = 0201B9F71D542638003FE2FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0201B9DE1D542638003FE2FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0201B9DF1D542638003FE2FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0201B9FD1D542638003FE2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0201B9FE1D542638003FE2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0201BA001D542638003FE2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A34252935AB8E1C2E5387E5E /* Pods-环信demo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/环信demo/Classes/Main/Const/PrefixHeader.pch";
+				INFOPLIST_FILE = "环信demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/环信demo/Classes/Main/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/环信demo/Classes/Main/VoiceConvert/opencore-amrwb",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GRIM.--demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0201BA011D542638003FE2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0563F93CC5E8CF2760780422 /* Pods-环信demo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/环信demo/Classes/Main/Const/PrefixHeader.pch";
+				INFOPLIST_FILE = "环信demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/环信demo/Classes/Main/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/环信demo/Classes/Main/VoiceConvert/opencore-amrwb",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GRIM.--demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0201BA031D542638003FE2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "环信demoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GRIM.--demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/环信demo.app/环信demo";
+			};
+			name = Debug;
+		};
+		0201BA041D542638003FE2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "环信demoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GRIM.--demoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/环信demo.app/环信demo";
+			};
+			name = Release;
+		};
+		0201BA061D542638003FE2FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "环信demoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GRIM.--demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "环信demo";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		0201BA071D542638003FE2FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "环信demoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.GRIM.--demoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "环信demo";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0201B9CD1D542638003FE2FA /* Build configuration list for PBXProject "环信demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0201B9FD1D542638003FE2FA /* Debug */,
+				0201B9FE1D542638003FE2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0201B9FF1D542638003FE2FA /* Build configuration list for PBXNativeTarget "环信demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0201BA001D542638003FE2FA /* Debug */,
+				0201BA011D542638003FE2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0201BA021D542638003FE2FA /* Build configuration list for PBXNativeTarget "环信demoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0201BA031D542638003FE2FA /* Debug */,
+				0201BA041D542638003FE2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0201BA051D542638003FE2FA /* Build configuration list for PBXNativeTarget "环信demoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0201BA061D542638003FE2FA /* Debug */,
+				0201BA071D542638003FE2FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0201B9CA1D542638003FE2FA /* Project object */;
+}

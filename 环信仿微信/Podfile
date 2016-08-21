@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+target "环信demo" do
+
+pod 'EaseMobSDKFull', :git => 'https://github.com/easemob/sdk-ios-cocoapods-integration.git'
+pod 'SVProgressHUD'
+pod 'JDStatusBarNotification'
+pod 'SDWebImage'
+pod 'MWPhotoBrowser'
+end
