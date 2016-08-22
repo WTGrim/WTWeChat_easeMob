@@ -102,6 +102,7 @@
     //添加代理，监听收到消息和收到离线消息
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
 
+
 }
  //键盘显示隐藏通知
 - (void)observeKeyboard{
@@ -196,6 +197,10 @@
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
+    
+    //将该会话未读的标记为已读
+    [[[EaseMob sharedInstance].chatManager conversationForChatter:self.username conversationType:eConversationTypeChat] markAllMessagesAsRead:YES];
+    
     [self scrollToBottom];
 }
 

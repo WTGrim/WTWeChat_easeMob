@@ -91,7 +91,7 @@
         case WTchatTypeVoice:
         {
             
-            contentH = 44;
+            contentH = 60;
             contentW = [self voiceLengthWithTime:chat.voiceDuration];
             
         }

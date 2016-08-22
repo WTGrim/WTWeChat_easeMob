@@ -8,6 +8,7 @@
 
 #import "WTTabBarController.h"
 #import "WTContactController.h"
+#import "WTWeChatController.h"
 
 @interface WTTabBarController ()<EMChatManagerDelegate>
 
@@ -30,7 +31,9 @@
     [super viewDidLoad];
     //添加代理
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
+
 }
+
 
 //接受到好友请求,改变badgeValue
 - (void)didReceiveBuddyRequest:(NSString *)username message:(NSString *)message{

@@ -179,7 +179,7 @@
         case WTchatTypeVoice:
         {
             [self.contentBtn setTitle:nil forState:UIControlStateNormal];
-            [self.contentBtn setImage:[UIImage imageNamed:@"SenderVoiceNodePlaying003"] forState:UIControlStateNormal];
+            [self.contentBtn setImage:[UIImage imageNamed:@"SenderVoiceNodePlaying"] forState:UIControlStateNormal];
             
             self.durationLabel.text = [NSString stringWithFormat:@"%zd\"", chat.voiceDuration];
             
