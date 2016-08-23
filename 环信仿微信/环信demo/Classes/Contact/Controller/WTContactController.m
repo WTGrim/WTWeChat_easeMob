@@ -9,6 +9,9 @@
 #import "WTContactController.h"
 #import "WTContactCell.h"
 #import "WTDetaiUserInfoController.h"
+#import "WTContactItemController.h"
+
+#define kHeaderItemH 201
 
 @interface WTContactController ()<EMChatManagerDelegate>
 /**注释*/
@@ -43,6 +46,9 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
+    //添加表头
+    [self setHeaderView];
+    
     //添加代理
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
     
@@ -53,6 +59,7 @@
         
         [self reloadContacts];
     }
+    
 }
 
 //刷新通讯录
@@ -72,7 +79,15 @@
     });
 }
 
-
+- (void)setHeaderView{
+    
+    WTContactItemController *contactItemVC = [[WTContactItemController alloc]init];
+    contactItemVC.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.tableView.bounds), kHeaderItemH);
+    self.tableView.tableHeaderView = contactItemVC.view;
+    //两个控制器view之间添加关系的时候，他们对应的控制器的关系也应该明确一下
+    [self addChildViewController:contactItemVC];
+    
+}
 
 - (void)addFriends{
     

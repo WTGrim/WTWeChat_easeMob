@@ -21,7 +21,7 @@
 
 /**注释*/
 @property(nonatomic, strong)UITableView *tableView;
-/**注释*/
+/**底部输入框*/
 @property(nonatomic, strong)WTInputView *inputView;
 
 /**聊天消息数据源*/
@@ -35,6 +35,18 @@
 
 @implementation WTChatRoomController
 
+
+//初始化确定聊天类型(私聊还是群聊)
++ (instancetype)wt_chatWithUsername:(NSString *)username chatType:(EMConversationType)chatType{
+    
+    WTChatRoomController *chatVC = [[WTChatRoomController alloc]init];
+    chatVC.username = username;
+    chatVC.chatType = chatType;
+    return chatVC;
+}
+
+
+#pragma mark - 懒加载
 - (UITableView *)tableView{
     
     if (!_tableView) {
@@ -92,6 +104,15 @@
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.inputView];
     self.navigationItem.title = self.username;
+    
+    //如果是群组聊天，那么标题显示
+    if (self.chatType == eConversationTypeGroupChat) {
+        
+        EMError *error = nil;
+        EMGroup *group = [[EaseMob sharedInstance].chatManager fetchGroupInfo:self.username error:&error];
+        self.navigationItem.title = [NSString stringWithFormat:@"%@(%ld)", group.groupSubject, group.groupOccupantsCount];
+    }
+    
     //键盘显示隐藏通知
     [self observeKeyboard];
     //聊天回话消息
@@ -135,7 +156,7 @@
      @constant eConversationTypeGroupChat       群聊会话
      @constant eConversationTypeChatRoom        聊天室会话
      */
-    EMConversation *conversation = [[EaseMob sharedInstance].chatManager conversationForChatter:self.username conversationType:eConversationTypeChat];
+    EMConversation *conversation = [[EaseMob sharedInstance].chatManager conversationForChatter:self.username conversationType:self.chatType];
     //从数据库中加载消息
     NSArray *msgArray = [conversation loadAllMessages];
     
@@ -199,7 +220,7 @@
     [super viewDidAppear:animated];
     
     //将该会话未读的标记为已读
-    [[[EaseMob sharedInstance].chatManager conversationForChatter:self.username conversationType:eConversationTypeChat] markAllMessagesAsRead:YES];
+    [[[EaseMob sharedInstance].chatManager conversationForChatter:self.username conversationType:self.chatType] markAllMessagesAsRead:YES];
     
     [self scrollToBottom];
 }
@@ -311,7 +332,7 @@
                     voice.duration = aDuration;
                     EMVoiceMessageBody *body = [[EMVoiceMessageBody alloc]initWithChatObject:voice];
                     EMMessage *emsg = [[EMMessage alloc]initWithReceiver:weakSelf.username bodies:@[body]];
-                    [[EaseMob sharedInstance].chatManager asyncSendMessage:emsg progress:self prepare:^(EMMessage *message, EMError *error) {
+                    [[EaseMob sharedInstance].chatManager asyncSendMessage:emsg progress:weakSelf prepare:^(EMMessage *message, EMError *error) {
                         
                         //在此处实现录制过程中btn一闪一闪的效果
                         

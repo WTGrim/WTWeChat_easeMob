@@ -15,4 +15,5 @@
 
 + (UIImage *)yf_imageWithColor:(UIColor *)color;
 
+- (UIImage *)wt_cornerImageWithSize:(CGSize)size fillClolor:(UIColor *)fillColor;
 @end

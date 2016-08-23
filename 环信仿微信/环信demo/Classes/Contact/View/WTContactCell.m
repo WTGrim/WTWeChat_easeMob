@@ -7,7 +7,7 @@
 //
 
 #import "WTContactCell.h"
-
+#import "WTContactItem.h"
 
 @interface WTContactCell()
 
@@ -49,5 +49,19 @@
     self.userIcon.image = [UIImage imageNamed:@"1"];
 }
 
+- (void)setHeaderItem:(WTContactItem *)headerItem{
+    
+    _headerItem = headerItem;
+    self.username.text = headerItem.title;
+    self.userIcon.image = [UIImage imageNamed:headerItem.iconName];
+    
+}
+
+- (void)setGroup:(EMGroup *)group{
+    
+    _group = group;
+    self.username.text = group.groupSubject;
+    self.userIcon.image = [UIImage imageNamed:@"add_friend_icon_addgroup"];
+}
 
 @end

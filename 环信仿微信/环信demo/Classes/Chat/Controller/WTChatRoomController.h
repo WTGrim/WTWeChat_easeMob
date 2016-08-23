@@ -10,8 +10,12 @@
 
 @interface WTChatRoomController : UIViewController
 
++ (instancetype)wt_chatWithUsername:(NSString *)username chatType:(EMConversationType)chatType;
+
 /**注释*/
 @property(nonatomic, strong)NSString *username;
 
+/**聊天类型*/
+@property(nonatomic, assign)EMConversationType chatType;
 
 @end

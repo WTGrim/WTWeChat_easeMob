@@ -27,6 +27,9 @@
 		02578C241D603B4D005FEE67 /* WTChatFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 02578C231D603B4D005FEE67 /* WTChatFrame.m */; };
 		02578C271D60495F005FEE67 /* WTLongPressBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 02578C261D60495F005FEE67 /* WTLongPressBtn.m */; };
 		02578C2A1D604DA4005FEE67 /* WTChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02578C291D604DA4005FEE67 /* WTChatCell.m */; };
+		0259AFEF1D6AE9A7002C4C8B /* WTContactItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259AFEE1D6AE9A7002C4C8B /* WTContactItemController.m */; };
+		0259AFF21D6AEA3C002C4C8B /* WTContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259AFF11D6AEA3C002C4C8B /* WTContactItem.m */; };
+		0259AFF51D6AFB30002C4C8B /* WTGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259AFF41D6AFB30002C4C8B /* WTGroupController.m */; };
 		0260ADB21D68523600B5FD81 /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADA41D68523600B5FD81 /* EMAudioPlayerUtil.m */; };
 		0260ADB31D68523600B5FD81 /* EMAudioRecorderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADA61D68523600B5FD81 /* EMAudioRecorderUtil.m */; };
 		0260ADB41D68523600B5FD81 /* EMCDDeviceManager+Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 0260ADA81D68523600B5FD81 /* EMCDDeviceManager+Media.m */; };
@@ -106,6 +109,12 @@
 		02578C261D60495F005FEE67 /* WTLongPressBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTLongPressBtn.m; sourceTree = "<group>"; };
 		02578C281D604DA4005FEE67 /* WTChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTChatCell.h; sourceTree = "<group>"; };
 		02578C291D604DA4005FEE67 /* WTChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTChatCell.m; sourceTree = "<group>"; };
+		0259AFED1D6AE9A6002C4C8B /* WTContactItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTContactItemController.h; sourceTree = "<group>"; };
+		0259AFEE1D6AE9A7002C4C8B /* WTContactItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTContactItemController.m; sourceTree = "<group>"; };
+		0259AFF01D6AEA3C002C4C8B /* WTContactItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTContactItem.h; sourceTree = "<group>"; };
+		0259AFF11D6AEA3C002C4C8B /* WTContactItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTContactItem.m; sourceTree = "<group>"; };
+		0259AFF31D6AFB30002C4C8B /* WTGroupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTGroupController.h; sourceTree = "<group>"; };
+		0259AFF41D6AFB30002C4C8B /* WTGroupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTGroupController.m; sourceTree = "<group>"; };
 		0260AD9F1D68523600B5FD81 /* EMCDDeviceManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerDelegate.h; sourceTree = "<group>"; };
 		0260ADA01D68523600B5FD81 /* EMCDDeviceManagerProximitySensorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCDDeviceManagerProximitySensorDelegate.h; sourceTree = "<group>"; };
 		0260ADA21D68523600B5FD81 /* DemoErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoErrorCode.h; sourceTree = "<group>"; };
@@ -262,6 +271,10 @@
 			children = (
 				025544E71D59C4C70087C813 /* WTContactController.h */,
 				025544E81D59C4C70087C813 /* WTContactController.m */,
+				0259AFED1D6AE9A6002C4C8B /* WTContactItemController.h */,
+				0259AFEE1D6AE9A7002C4C8B /* WTContactItemController.m */,
+				0259AFF31D6AFB30002C4C8B /* WTGroupController.h */,
+				0259AFF41D6AFB30002C4C8B /* WTGroupController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +282,8 @@
 		020046841D55D40100C6C4BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0259AFF01D6AEA3C002C4C8B /* WTContactItem.h */,
+				0259AFF11D6AEA3C002C4C8B /* WTContactItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -818,11 +833,14 @@
 				0201B9D71D542638003FE2FA /* main.m in Sources */,
 				0260ADB51D68523600B5FD81 /* EMCDDeviceManager+Microphone.m in Sources */,
 				02578C271D60495F005FEE67 /* WTLongPressBtn.m in Sources */,
+				0259AFF21D6AEA3C002C4C8B /* WTContactItem.m in Sources */,
+				0259AFF51D6AFB30002C4C8B /* WTGroupController.m in Sources */,
 				025544E91D59C4C70087C813 /* WTContactController.m in Sources */,
 				02FCD2A01D55F9FA003A7149 /* WTTabBarController.m in Sources */,
 				0260ADCA1D68524D00B5FD81 /* wav.mm in Sources */,
 				0260ADCB1D68524D00B5FD81 /* EMVoiceConverter.mm in Sources */,
 				02FCD2B01D562859003A7149 /* WTMeController.m in Sources */,
+				0259AFEF1D6AE9A7002C4C8B /* WTContactItemController.m in Sources */,
 				0260ADB61D68523600B5FD81 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				0242E8F11D5C6A0800225015 /* WTChatRoomController.m in Sources */,
 				0260ADC91D68524D00B5FD81 /* amrFileCodec.mm in Sources */,

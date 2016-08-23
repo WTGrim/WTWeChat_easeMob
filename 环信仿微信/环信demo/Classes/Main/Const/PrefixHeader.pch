@@ -15,6 +15,6 @@
 
 #define backgroundColor243  [UIColor colorWithRed:243/255.0 green:243/255.0 blue:243/255.0 alpha:1]
 
-
+#define weakSelf(type) __weak typeof(type)weak##type = type
 
 #endif /* PrefixHeader_pch */

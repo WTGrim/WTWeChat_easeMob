@@ -54,7 +54,8 @@ NSString *const WTTitleWillConnect = @"连接中...";
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
-    
+    //刷新会话列表
+    [self reloadConversations];
     //显示未读消息的数字
     NSInteger unreadMsg = [[EaseMob sharedInstance].chatManager loadTotalUnreadMessagesCountFromDatabase];
     NSString *bdv = unreadMsg ? [NSString stringWithFormat:@"%zd", unreadMsg]: nil;
