@@ -21,6 +21,7 @@
 		0242E8F11D5C6A0800225015 /* WTChatRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0242E8F01D5C6A0800225015 /* WTChatRoomController.m */; };
 		0242E8F41D5C6A7B00225015 /* WTInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0242E8F31D5C6A7B00225015 /* WTInputView.m */; };
 		0242E8F61D5C6A8F00225015 /* WTInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0242E8F51D5C6A8F00225015 /* WTInputView.xib */; };
+		0249E3D51D6C20AF0076B7BE /* WTMoreInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0249E3D41D6C20AF0076B7BE /* WTMoreInputView.m */; };
 		025544E61D59B7A70087C813 /* WTWeChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025544E51D59B7A70087C813 /* WTWeChatController.m */; };
 		025544E91D59C4C70087C813 /* WTContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025544E81D59C4C70087C813 /* WTContactController.m */; };
 		02578C211D603B37005FEE67 /* WTChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 02578C201D603B37005FEE67 /* WTChat.m */; };
@@ -97,6 +98,8 @@
 		0242E8F21D5C6A7B00225015 /* WTInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTInputView.h; sourceTree = "<group>"; };
 		0242E8F31D5C6A7B00225015 /* WTInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTInputView.m; sourceTree = "<group>"; };
 		0242E8F51D5C6A8F00225015 /* WTInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTInputView.xib; sourceTree = "<group>"; };
+		0249E3D31D6C20AF0076B7BE /* WTMoreInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMoreInputView.h; sourceTree = "<group>"; };
+		0249E3D41D6C20AF0076B7BE /* WTMoreInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMoreInputView.m; sourceTree = "<group>"; };
 		025544E41D59B7A70087C813 /* WTWeChatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTWeChatController.h; sourceTree = "<group>"; };
 		025544E51D59B7A70087C813 /* WTWeChatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWeChatController.m; sourceTree = "<group>"; };
 		025544E71D59C4C70087C813 /* WTContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTContactController.h; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				02578C261D60495F005FEE67 /* WTLongPressBtn.m */,
 				02578C281D604DA4005FEE67 /* WTChatCell.h */,
 				02578C291D604DA4005FEE67 /* WTChatCell.m */,
+				0249E3D31D6C20AF0076B7BE /* WTMoreInputView.h */,
+				0249E3D41D6C20AF0076B7BE /* WTMoreInputView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				0259AFF21D6AEA3C002C4C8B /* WTContactItem.m in Sources */,
 				0259AFF51D6AFB30002C4C8B /* WTGroupController.m in Sources */,
 				025544E91D59C4C70087C813 /* WTContactController.m in Sources */,
+				0249E3D51D6C20AF0076B7BE /* WTMoreInputView.m in Sources */,
 				02FCD2A01D55F9FA003A7149 /* WTTabBarController.m in Sources */,
 				0260ADCA1D68524D00B5FD81 /* wav.mm in Sources */,
 				0260ADCB1D68524D00B5FD81 /* EMVoiceConverter.mm in Sources */,

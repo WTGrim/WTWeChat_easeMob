@@ -54,6 +54,13 @@
                         <constraint firstAttribute="height" constant="1" id="kxG-d9-AmN"/>
                     </constraints>
                 </view>
+                <view alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kqv-DI-g0T">
+                    <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="dUK-b1-1p7"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rf-0X-NNY">
                     <rect key="frame" x="44" y="5" width="188" height="34"/>
                     <state key="normal" title="按住 说话">
@@ -72,6 +79,7 @@
             <constraints>
                 <constraint firstItem="7Rf-0X-NNY" firstAttribute="trailing" secondItem="gbq-G5-2t2" secondAttribute="trailing" id="1V9-o2-9v1"/>
                 <constraint firstItem="gbq-G5-2t2" firstAttribute="leading" secondItem="KE3-Nh-7CB" secondAttribute="trailing" id="21l-EY-9RC"/>
+                <constraint firstItem="Kqv-DI-g0T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2ST-SV-58l"/>
                 <constraint firstItem="xEh-cc-ovi" firstAttribute="bottom" secondItem="8Bz-au-Gpi" secondAttribute="bottom" id="5qZ-L5-VPM"/>
                 <constraint firstItem="gqX-9e-4pR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Afh-Wk-ald"/>
                 <constraint firstAttribute="trailing" secondItem="gqX-9e-4pR" secondAttribute="trailing" id="DMO-h7-Fbg"/>
@@ -83,6 +91,7 @@
                 <constraint firstItem="KE3-Nh-7CB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TBg-ct-WDB"/>
                 <constraint firstItem="xEh-cc-ovi" firstAttribute="top" secondItem="8Bz-au-Gpi" secondAttribute="top" id="bWa-9x-6an"/>
                 <constraint firstItem="7Rf-0X-NNY" firstAttribute="bottom" secondItem="gbq-G5-2t2" secondAttribute="bottom" id="dCe-3N-dua"/>
+                <constraint firstAttribute="trailing" secondItem="Kqv-DI-g0T" secondAttribute="trailing" id="dRy-00-cht"/>
                 <constraint firstItem="KE3-Nh-7CB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gGJ-v2-zho"/>
                 <constraint firstItem="7Rf-0X-NNY" firstAttribute="top" secondItem="gbq-G5-2t2" secondAttribute="top" id="hzZ-oQ-QjR"/>
                 <constraint firstAttribute="bottom" secondItem="gbq-G5-2t2" secondAttribute="bottom" constant="5" id="ikq-1h-yuP"/>
@@ -91,9 +100,11 @@
                 <constraint firstItem="gqX-9e-4pR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ql0-vq-M9e"/>
                 <constraint firstAttribute="bottom" secondItem="KE3-Nh-7CB" secondAttribute="bottom" id="tai-Ek-fYI"/>
                 <constraint firstItem="8Bz-au-Gpi" firstAttribute="leading" secondItem="xEh-cc-ovi" secondAttribute="trailing" id="wYv-Pb-kcf"/>
+                <constraint firstAttribute="bottom" secondItem="Kqv-DI-g0T" secondAttribute="bottom" id="xr9-bN-ttC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="changeStyleBtn" destination="KE3-Nh-7CB" id="CmM-F5-MXJ"/>
                 <outlet property="textField" destination="gbq-G5-2t2" id="gKW-x5-T1t"/>
                 <outlet property="voiceBtn" destination="7Rf-0X-NNY" id="V0m-1V-UJg"/>
             </connections>

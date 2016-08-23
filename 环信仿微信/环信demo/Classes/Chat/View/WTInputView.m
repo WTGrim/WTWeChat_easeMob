@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *voiceBtn;
 
+@property (weak, nonatomic) IBOutlet UIButton *changeStyleBtn;
 
 @end
 @implementation WTInputView
@@ -37,6 +38,12 @@
     
     //通过代理监听键盘回退
     self.voiceBtn.hidden ? [self.textField becomeFirstResponder]: [self.textField resignFirstResponder];
+    
+    //代理
+    if ([self.inputViewDelegate respondsToSelector:@selector(wt_inputView:changeInputViewStyle:)]) {
+        [self.inputViewDelegate wt_inputView:self changeInputViewStyle:(self.voiceBtn.hidden)? inputViewStyleText:inputViewStyleVoice];
+    }
+    
 }
 
 
@@ -45,9 +52,20 @@
 
 - (IBAction)moreOnclick:(UIButton *)sender {
     
+    //如果键盘正在编辑状态，再点击就取消
+    if ([self.textField isFirstResponder]) {
+        [self.textField resignFirstResponder];
+    }
+    
     if ([self.inputViewDelegate respondsToSelector:@selector(wt_inputView:moreOnclickWith:)]) {
         
         [self.inputViewDelegate wt_inputView:self moreOnclickWith:0];
+    }
+    
+    //如果点击之前是按住说话，就改变样式为text, 涉及到textfield是否是第一响应者，要注意执行的先后顺序
+    if (!self.voiceBtn.hidden) {
+        
+        [self changeInputStyle:self.changeStyleBtn];
     }
     
 }

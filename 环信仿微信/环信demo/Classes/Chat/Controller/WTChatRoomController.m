@@ -14,8 +14,10 @@
 #import "WTChatFrame.h"
 #import <MWPhotoBrowser.h>
 #import "EMCDDeviceManager.h"
+#import "WTMoreInputView.h"
 
 #define kInputViewH 44
+#define kMoreInputViewFrame CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), kMoreInputViewH)
 
 @interface WTChatRoomController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, EMChatManagerDelegate, WTInputViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, IEMChatProgressDelegate, WTChatCellDelegate, MWPhotoBrowserDelegate>
 
@@ -30,6 +32,10 @@
 @property(nonatomic, strong)NSMutableArray *chatImage;
 /**聊天缩略图*/
 @property(nonatomic, strong)NSMutableArray *chatThumbImage;
+
+/**更多按钮*/
+@property(nonatomic, strong)WTMoreInputView *moreInputView;
+
 
 @end
 
@@ -74,6 +80,54 @@
     }
     return _inputView;
 }
+
+- (WTMoreInputView *)moreInputView{
+    
+    if (!_moreInputView) {
+        _moreInputView = [[WTMoreInputView alloc]init];
+        _moreInputView.frame = CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), kMoreInputViewH);
+        [[UIApplication sharedApplication].keyWindow addSubview:_moreInputView];
+        [UIApplication sharedApplication].keyWindow.backgroundColor = backgroundColor243;
+        
+        weakSelf(self);
+        _moreInputView.moreInputViewBlock = ^(UIButton *btn){
+            
+            [weakself.view endEditing:YES];
+            [weakself dismissMoreInputViewWithAnimation:NO];
+            
+            if ([btn.currentTitle isEqualToString:@"照片"]) {
+                //相片选择
+                UIImagePickerController *ipc = [[UIImagePickerController alloc]init];
+                ipc.delegate = weakself;
+                [weakself presentViewController:ipc animated:YES completion:nil];
+            }else if([btn.currentTitle isEqualToString:@"视频聊天"]){
+               
+                UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+                
+                [alertVC addAction:[UIAlertAction actionWithTitle:@"视频聊天" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    //弹窗视频
+                    
+                    
+                }]];
+                [alertVC addAction:[UIAlertAction actionWithTitle:@"音频聊天" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    //音频聊天
+                    
+                }]];
+                [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    
+                    //取消
+                    
+                }]];
+                
+                [weakself presentViewController:alertVC animated:YES completion:nil];
+            }
+            
+        };
+        
+    }
+    return _moreInputView;
+}
+
 
 - (NSMutableArray *)chatMessage{
     
@@ -218,7 +272,8 @@
 - (void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
-    
+    //调用一下更多按钮
+    [self moreInputView];
     //将该会话未读的标记为已读
     [[[EaseMob sharedInstance].chatManager conversationForChatter:self.username conversationType:self.chatType] markAllMessagesAsRead:YES];
     
@@ -253,6 +308,10 @@
 - (void)viewWillDisappear:(BOOL)animated{
     
     [super viewWillDisappear:animated];
+    
+    //收起moreInputView
+    [self dismissMoreInputViewWithAnimation:NO];
+    
     self.navigationController.tabBarController.tabBar.hidden = NO;
 }
 
@@ -293,11 +352,45 @@
 }
 
 #pragma mark - inputViewDelegate
+
+- (void)wt_inputView:(WTInputView *)inputView changeInputViewStyle:(inputViewStyle)Style{
+    
+    switch (Style) {
+        case inputViewStyleText:
+        {
+            
+        }
+            break;
+        case inputViewStyleVoice:
+        {
+            [self dismissMoreInputViewWithAnimation:YES];
+
+        }
+            break;
+        default:
+            break;
+    }
+    
+}
+
 - (void)wt_inputView:(WTInputView *)inputView moreOnclickWith:(NSInteger)moreStyle{
     
-    UIImagePickerController *ipc = [[UIImagePickerController alloc]init];
-    ipc.delegate = self;
-    [self presentViewController:ipc animated:YES completion:nil];
+
+    weakSelf(self);
+    if (self.view.frame.origin.y == 0) {
+        
+        [UIView animateWithDuration:0.25 animations:^{
+           
+            CGRect tempRect = CGRectMake(0, -kMoreInputViewH, CGRectGetWidth(weakself.view.bounds), CGRectGetHeight(weakself.view.bounds));
+            weakself.view.frame = tempRect;
+            weakself.moreInputView.frame = CGRectMake(0, CGRectGetHeight(weakself.view.bounds) - kMoreInputViewH,  CGRectGetWidth(weakself.view.bounds), kMoreInputViewH);
+        }];
+    }else{
+        
+        [self dismissMoreInputViewWithAnimation:NO];
+        [self.inputView.textField becomeFirstResponder];
+    }
+    
 }
 
 
@@ -473,5 +566,19 @@
 - (void)didReceiveOfflineMessages:(NSArray *)offlineMessages{
     
     [self reloadChatMsg];
+}
+
+
+- (void)dismissMoreInputViewWithAnimation:(BOOL)hasAnimation{
+    
+    //将moreInputView收起来，回复原样
+    if (hasAnimation) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.moreInputView.frame = kMoreInputViewFrame;
+            self.view.frame = self.view.bounds;
+        }];
+    }
+    self.moreInputView.frame = kMoreInputViewFrame;
+    self.view.frame = self.view.bounds;
 }
 @end
