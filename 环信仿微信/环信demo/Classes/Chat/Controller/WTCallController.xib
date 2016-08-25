@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WTCallController">
+            <connections>
+                <outlet property="agreeCall" destination="bqj-Xh-VX9" id="bYg-Va-7Ed"/>
+                <outlet property="cancleButton" destination="G9i-kg-EYZ" id="Tti-Aq-jaT"/>
+                <outlet property="statusLab" destination="Mpj-sJ-2kB" id="TBb-4Z-qxa"/>
+                <outlet property="usernameLab" destination="Cga-aq-iME" id="Ucd-mR-Rum"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" alpha="0.80000000000000004" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cga-aq-iME">
+                    <rect key="frame" x="0.0" y="180" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="gbU-Gc-zDc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在等待对方接受邀请..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpj-sJ-2kB">
+                    <rect key="frame" x="0.0" y="240" width="375" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="EZ1-sf-xvo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9i-kg-EYZ">
+                    <rect key="frame" x="157" y="547" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="L9C-gw-YEN"/>
+                        <constraint firstAttribute="width" constant="60" id="XkN-TY-aAA"/>
+                        <constraint firstAttribute="height" constant="60" id="eTv-OB-WCy"/>
+                    </constraints>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="cancleOnClick:" destination="-1" eventType="touchUpInside" id="LKW-VU-Wzd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqj-Xh-VX9">
+                    <rect key="frame" x="262" y="547" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="4BO-OY-oc3"/>
+                        <constraint firstAttribute="width" constant="60" id="yWG-Bi-bAl"/>
+                    </constraints>
+                    <state key="normal" title="同意">
+                        <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="agreeCall:" destination="-1" eventType="touchUpInside" id="hJN-OR-R10"/>
+                        <action selector="cancleOnClick:" destination="-1" eventType="touchUpInside" id="Xc4-Ns-KqX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="G9i-kg-EYZ" secondAttribute="bottom" constant="60" id="42k-Or-JTJ"/>
+                <constraint firstItem="G9i-kg-EYZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ibq-at-hJ7"/>
+                <constraint firstAttribute="trailing" secondItem="Mpj-sJ-2kB" secondAttribute="trailing" id="MiM-21-aZb"/>
+                <constraint firstItem="Mpj-sJ-2kB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pth-K6-CLS"/>
+                <constraint firstAttribute="trailing" secondItem="Cga-aq-iME" secondAttribute="trailing" id="RRq-wZ-lQK"/>
+                <constraint firstItem="bqj-Xh-VX9" firstAttribute="centerY" secondItem="G9i-kg-EYZ" secondAttribute="centerY" id="fDp-Ch-ov1"/>
+                <constraint firstItem="Cga-aq-iME" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="j9W-Uh-XUo"/>
+                <constraint firstItem="Cga-aq-iME" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="180" id="mZI-Td-RsO"/>
+                <constraint firstItem="bqj-Xh-VX9" firstAttribute="leading" secondItem="G9i-kg-EYZ" secondAttribute="trailing" constant="45" id="rOA-3f-hRe"/>
+                <constraint firstItem="Mpj-sJ-2kB" firstAttribute="top" secondItem="Cga-aq-iME" secondAttribute="bottom" constant="16" id="xVW-qk-Vbd"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>

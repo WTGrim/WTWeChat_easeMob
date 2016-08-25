@@ -14,6 +14,8 @@
 		0201B9E21D542638003FE2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0201B9E11D542638003FE2FA /* Assets.xcassets */; };
 		0201B9F01D542638003FE2FA /* __demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0201B9EF1D542638003FE2FA /* __demoTests.m */; };
 		0201B9FB1D542638003FE2FA /* __demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0201B9FA1D542638003FE2FA /* __demoUITests.m */; };
+		0209DAA11D6F1CEA00AE89EB /* WTCallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0209DA9F1D6F1CEA00AE89EB /* WTCallController.m */; };
+		0209DAA21D6F1CEA00AE89EB /* WTCallController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0209DAA01D6F1CEA00AE89EB /* WTCallController.xib */; };
 		0242E8E81D5C0D2100225015 /* WTContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0242E8E61D5C0D2100225015 /* WTContactCell.m */; };
 		0242E8E91D5C0D2100225015 /* WTContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0242E8E71D5C0D2100225015 /* WTContactCell.xib */; };
 		0242E8EC1D5C1F3E00225015 /* WTDetaiUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0242E8EB1D5C1F3E00225015 /* WTDetaiUserInfoController.m */; };
@@ -87,6 +89,9 @@
 		0201B9F61D542638003FE2FA /* 环信demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "环信demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0201B9FA1D542638003FE2FA /* __demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __demoUITests.m; sourceTree = "<group>"; };
 		0201B9FC1D542638003FE2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0209DA9E1D6F1CEA00AE89EB /* WTCallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTCallController.h; sourceTree = "<group>"; };
+		0209DA9F1D6F1CEA00AE89EB /* WTCallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTCallController.m; sourceTree = "<group>"; };
+		0209DAA01D6F1CEA00AE89EB /* WTCallController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTCallController.xib; sourceTree = "<group>"; };
 		0242E8E51D5C0D2100225015 /* WTContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTContactCell.h; sourceTree = "<group>"; };
 		0242E8E61D5C0D2100225015 /* WTContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTContactCell.m; sourceTree = "<group>"; };
 		0242E8E71D5C0D2100225015 /* WTContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTContactCell.xib; sourceTree = "<group>"; };
@@ -230,6 +235,9 @@
 				0242E8ED1D5C1F5300225015 /* WTDetaiUserInfoController.storyboard */,
 				0242E8EF1D5C6A0800225015 /* WTChatRoomController.h */,
 				0242E8F01D5C6A0800225015 /* WTChatRoomController.m */,
+				0209DA9E1D6F1CEA00AE89EB /* WTCallController.h */,
+				0209DA9F1D6F1CEA00AE89EB /* WTCallController.m */,
+				0209DAA01D6F1CEA00AE89EB /* WTCallController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -746,6 +754,7 @@
 			files = (
 				0242E8F61D5C6A8F00225015 /* WTInputView.xib in Resources */,
 				02FCD2B21D562A7B003A7149 /* Images.xcassets in Resources */,
+				0209DAA21D6F1CEA00AE89EB /* WTCallController.xib in Resources */,
 				0242E8E91D5C0D2100225015 /* WTContactCell.xib in Resources */,
 				0201B9E21D542638003FE2FA /* Assets.xcassets in Resources */,
 				0242E8EE1D5C1F5300225015 /* WTDetaiUserInfoController.storyboard in Resources */,
@@ -843,6 +852,7 @@
 				025544E91D59C4C70087C813 /* WTContactController.m in Sources */,
 				0249E3D51D6C20AF0076B7BE /* WTMoreInputView.m in Sources */,
 				02FCD2A01D55F9FA003A7149 /* WTTabBarController.m in Sources */,
+				0209DAA11D6F1CEA00AE89EB /* WTCallController.m in Sources */,
 				0260ADCA1D68524D00B5FD81 /* wav.mm in Sources */,
 				0260ADCB1D68524D00B5FD81 /* EMVoiceConverter.mm in Sources */,
 				02FCD2B01D562859003A7149 /* WTMeController.m in Sources */,

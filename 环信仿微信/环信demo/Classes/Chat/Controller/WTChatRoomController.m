@@ -15,11 +15,12 @@
 #import <MWPhotoBrowser.h>
 #import "EMCDDeviceManager.h"
 #import "WTMoreInputView.h"
+#import "WTCallController.h"
 
 #define kInputViewH 44
 #define kMoreInputViewFrame CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), kMoreInputViewH)
 
-@interface WTChatRoomController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, EMChatManagerDelegate, WTInputViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, IEMChatProgressDelegate, WTChatCellDelegate, MWPhotoBrowserDelegate>
+@interface WTChatRoomController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, EMChatManagerDelegate, WTInputViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, IEMChatProgressDelegate, WTChatCellDelegate, MWPhotoBrowserDelegate, EMCallManagerDelegate>
 
 /**注释*/
 @property(nonatomic, strong)UITableView *tableView;
@@ -111,6 +112,16 @@
                 }]];
                 [alertVC addAction:[UIAlertAction actionWithTitle:@"音频聊天" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     //音频聊天
+                    //建立通道
+                    EMError *error = nil;
+                    [[EaseMob sharedInstance].callManager asyncMakeVoiceCall:weakself.username timeout:0 error:&error];
+                    
+                    if (error) {
+                        [SVProgressHUD showErrorWithStatus:error.description];
+                    }
+                    
+                    //在代理方法中执行相关的操作
+                    
                     
                 }]];
                 [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -176,7 +187,8 @@
     
     //添加代理，监听收到消息和收到离线消息
     [[EaseMob sharedInstance].chatManager addDelegate:self delegateQueue:nil];
-
+    
+    [[EaseMob sharedInstance].callManager addDelegate:self delegateQueue:nil];
 
 }
  //键盘显示隐藏通知
@@ -315,6 +327,27 @@
     self.navigationController.tabBarController.tabBar.hidden = NO;
 }
 
+#pragma mark - EMCallManagerDelegate
+//实时通话状态发生变化时的回调
+/*
+@constant eCallSessionStatusDisconnected 通话没开始
+@constant eCallSessionStatusRinging 通话响铃
+@constant eCallSessionStatusAnswering 通话双方正在协商
+@constant eCallSessionStatusPausing 通话暂停
+@constant eCallSessionStatusConnecting 通话已经准备好，等待接听
+@constant eCallSessionStatusConnected 通话已连接
+@constant eCallSessionStatusAccepted 通话双方同意协商
+ */
+- (void)callSessionStatusChanged:(EMCallSession *)callSession changeReason:(EMCallStatusChangedReason)reason error:(EMError *)error{
+    
+    if (callSession.status == eCallSessionStatusConnected) {
+        
+        WTCallController *callVC = [[WTCallController alloc]init];
+        callVC.callSession = callSession;
+        [self presentViewController:callVC animated:YES completion:nil];
+    }
+    
+}
 
 #pragma mark - textFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
